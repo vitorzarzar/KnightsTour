@@ -1,6 +1,6 @@
 # Problem
 
-A knight's tour is a sequence of moves of a knight on a chessboard such that the knight visits every square exactly once.
+A knight's tour is a sequence of moves of a knight on a chessboard such that the knight visits every tile exactly once.
 
 ![Chessboard](resources/chess_board.jpg)
 
