@@ -1,0 +1,33 @@
+plugins {
+    id 'application'
+    id "me.champeau.jmh" version "0.6.6"
+}
+
+mainClassName = 'com.knightstour.Application'
+
+group 'com.knightstour'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jmh {
+    fork = 1
+    iterations = 1000
+    warmupIterations = 1
+    timeUnit = 'us'
+    warmup = '1s'
+    failOnError = true
+    timeOnIteration = '500us'
+    benchmarkMode = ['AverageTime']
+}
